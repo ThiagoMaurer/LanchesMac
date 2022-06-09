@@ -1,0 +1,43 @@
+﻿@model LancheListViewModel
+
+@{
+    ViewData["Title"] = "Lanches";
+}
+
+<style>
+    .card img {
+        height: 30vh;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid lightgray;
+                transition: 0.2s all;
+    }
+
+    .card {
+        cursor: pointer;
+        height: 100%;
+    }
+
+    .card:hover {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .card:hover img {
+        transform: scale(1.02);
+    }
+</style>
+
+<div>
+    <h2>@Model.CategoriaAtual</h2>
+
+    <hr />
+
+    <div class="container">
+        <div class="row">
+            @foreach (var lanche in Model.Lanches)
+            {
+                <partial name="_LanchesResumo" for="@lanche"></partial>
+            }
+        </div>
+    </div>
+</div>

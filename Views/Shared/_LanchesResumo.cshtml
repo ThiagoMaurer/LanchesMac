@@ -1,0 +1,12 @@
+﻿@model Lanche
+
+<div class="col-4 mb-3">
+    <div class="card">
+        <div class="card-body">
+            <p><img src="~/img/lanches/@Model.ImagemUrl" class="img-fluid" /></p>
+            <p>Preço: @Model.Preco.ToString("c")</p>
+            <h4>Lanche: @Model.Nome</h4>
+            <p>@Model.DescricaoCurta</p>
+        </div>
+    </div>
+</div>

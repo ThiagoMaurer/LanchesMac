@@ -29,7 +29,7 @@ public class Lanche
 
     [Display(Name = "O preço do lanche")]
     [Required(ErrorMessage = "{0} deve ser informado.")]
-    [Column(TypeName = "decimal(10,2")]
+    [Column(TypeName = "decimal(10,2)")]
     [Range(1, 999.99, ErrorMessage = "{0} deve estar entre {1} e {2}.")]
     public decimal Preco { get; set; }
 
